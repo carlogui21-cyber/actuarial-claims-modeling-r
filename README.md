@@ -16,6 +16,12 @@ The script relies on the `fitdistrplus` package for distribution fitting and den
 To run the code, install the required library:
 ```R
 install.packages("fitdistrplus")
+```
+
+## 🚀 Usage Example
+You can test the function by passing a simple aggregated dataframe of claims and policies:
+
+```R
 # 1. Load the required library
 library(fitdistrplus)
 
@@ -36,3 +42,10 @@ results <- best_fit_frequency(claims_data)
 # 5. View the summary table
 print(results$Best_Fit_Result)
 print(results$Summary)
+```
+
+## 📊 Output
+The function returns a list containing:
+1. A descriptive string declaring the winning model.
+2. A clean Summary Table comparing all AIC values.
+3. A visual density plot (`denscomp`) showing the goodness-of-fit for the successfully fitted distributions.
